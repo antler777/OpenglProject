@@ -1,0 +1,19 @@
+﻿  main.cpp
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\shader.h(5,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\camera.h(28,23): warning C4305: “初始化”: 从“double”到“float”截断
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\camera.h(37,28): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\camera.h(61,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\camera.h(62,21): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\camera.h(66,23): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\camera.h(67,23): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\camera.h(68,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\camera.h(69,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\camera.h(96,20): warning C4244: “-=”: 从“double”转换到“float”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\main.cpp(88,69): warning C4244: “参数”: 从“const float”转换到“int”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\main.cpp(88,49): warning C4244: “参数”: 从“const float”转换到“int”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\main.cpp(204,70): warning C4244: “参数”: 从“const float”转换到“GLsizei”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\main.cpp(204,50): warning C4244: “参数”: 从“const float”转换到“GLsizei”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\main.cpp(214,91): warning C4244: “参数”: 从“const float”转换到“GLsizei”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\main.cpp(214,71): warning C4244: “参数”: 从“const float”转换到“GLsizei”，可能丢失数据
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\源文件\main.cpp(255,25): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+  OpenGL.vcxproj -> D:\OpenglProject\FrameBuffer\OpenGL\x64\Debug\OpenGL.exe

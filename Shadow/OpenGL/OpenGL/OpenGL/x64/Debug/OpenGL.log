@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\OpenglProject\CPP\OpenGL\OpenGL\源文件\shader.h(5,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+D:\OpenglProject\CPP\OpenGL\OpenGL\源文件\main.cpp(210,25): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+  OpenGL.vcxproj -> D:\OpenglProject\CPP\OpenGL\x64\Debug\OpenGL.exe

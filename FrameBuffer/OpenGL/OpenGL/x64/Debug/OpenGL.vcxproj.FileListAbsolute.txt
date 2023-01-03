@@ -1,0 +1,3 @@
+D:\OpenglProject\CPP\OpenGL\OpenGL\x64\Debug\OpenGL.exe
+D:\OpenglProject\Basic\OpenGL\OpenGL\x64\Debug\OpenGL.exe
+D:\OpenglProject\FrameBuffer\OpenGL\OpenGL\x64\Debug\OpenGL.exe
