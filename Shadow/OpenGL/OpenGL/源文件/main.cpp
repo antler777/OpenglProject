@@ -172,6 +172,40 @@ int main()
     //解绑
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     // -----------------------
+    //------------------------Framebuffer（Start）-----------------------
+#pragma region
+
+    // 创建 buffer
+    // -------------------------
+
+    unsigned int texBuffer;
+    glGenFramebuffers(1, &texBuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, texBuffer);
+    // 创建一个纹理附件
+    unsigned int RT0;
+    glGenTextures(1, &RT0);
+    glBindTexture(GL_TEXTURE_2D, RT0);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, camera.screenWidth, camera.screenHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    //把纹理附加到buffer上面
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, RT0, 0);
+    // 创建RBO
+    unsigned int rbo;
+    glGenRenderbuffers(1, &rbo);
+    glBindRenderbuffer(GL_RENDERBUFFER, rbo);
+    //创建 Depth Sencil对象
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, camera.screenWidth, camera.screenHeight); // use a single renderbuffer object for both a depth AND stencil buffer.
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo); // now actually attach it
+    // now that we actually created the framebuffer and added all attachments we want to check if it is actually complete now
+    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+        cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << endl;
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+
+
+#pragma endregion  
+    //------------------------Framebuffer（End）-----------------------
     //---------------------------------准备阶段------------------------------------------
     
     // render loop
@@ -221,7 +255,9 @@ int main()
         renderScene(simpleDepthShader);
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
-
+                //Bind 纹理缓存
+        glBindFramebuffer(GL_FRAMEBUFFER, texBuffer);
+        glEnable(GL_DEPTH_TEST);
         // 2.绘制场景
         // ---------------------------------------------
 
@@ -287,14 +323,18 @@ int main()
 
         // 3.渲染屏幕四边形，并对depth map输出
         // ---------------------------------------------
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        
+        
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // set clear color to white (not really necessary actually, since we won't be able to see behind the quad anyways)
+        glClear(GL_COLOR_BUFFER_BIT);
+
         debugDepthQuad.use();
-        debugDepthQuad.setFloat("near_plane", near_plane);
-        debugDepthQuad.setFloat("far_plane", far_plane);
         glActiveTexture(GL_TEXTURE0);
-        debugDepthQuad.setInt("depthMap", 0);
-        glBindTexture(GL_TEXTURE_2D, depthMap);
-
-
+        debugDepthQuad.setInt("t0", 0);
+        glBindTexture(GL_TEXTURE_2D, RT0);
+        renderQuad();
+       
 
 
         //绘制GUI

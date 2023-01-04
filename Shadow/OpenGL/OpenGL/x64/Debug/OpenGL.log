@@ -11,4 +11,9 @@ D:\OpenglProject\Shadow\OpenGL\OpenGL\源文件\camera.h(69,17): warning C4244: 
 D:\OpenglProject\Shadow\OpenGL\OpenGL\源文件\camera.h(96,20): warning C4244: “-=”: 从“double”转换到“float”，可能丢失数据
 D:\OpenglProject\Shadow\OpenGL\OpenGL\源文件\main.cpp(85,69): warning C4244: “参数”: 从“const float”转换到“int”，可能丢失数据
 D:\OpenglProject\Shadow\OpenGL\OpenGL\源文件\main.cpp(85,49): warning C4244: “参数”: 从“const float”转换到“int”，可能丢失数据
+D:\OpenglProject\Shadow\OpenGL\OpenGL\源文件\main.cpp(188,70): warning C4244: “参数”: 从“const float”转换到“GLsizei”，可能丢失数据
+D:\OpenglProject\Shadow\OpenGL\OpenGL\源文件\main.cpp(188,50): warning C4244: “参数”: 从“const float”转换到“GLsizei”，可能丢失数据
+D:\OpenglProject\Shadow\OpenGL\OpenGL\源文件\main.cpp(198,91): warning C4244: “参数”: 从“const float”转换到“GLsizei”，可能丢失数据
+D:\OpenglProject\Shadow\OpenGL\OpenGL\源文件\main.cpp(198,71): warning C4244: “参数”: 从“const float”转换到“GLsizei”，可能丢失数据
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
   OpenGL.vcxproj -> D:\OpenglProject\Shadow\OpenGL\x64\Debug\OpenGL.exe
